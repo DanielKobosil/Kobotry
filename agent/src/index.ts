@@ -58,7 +58,7 @@ import createZilliqaPlugin from "@elizaos/plugin-zilliqa";
 
 // import { intifacePlugin } from "@elizaos/plugin-intiface";
 import { ThreeDGenerationPlugin } from "@elizaos/plugin-3d-generation";
-import { abstractPlugin } from "@elizaos/plugin-abstract";
+
 import { akashPlugin } from "@elizaos/plugin-akash";
 import { alloraPlugin } from "@elizaos/plugin-allora";
 import { aptosPlugin } from "@elizaos/plugin-aptos";
@@ -1147,9 +1147,6 @@ export async function createAgent(
                 : null,
             getSecret(character, "MORALIS_API_KEY") ? moralisPlugin : null,
             getSecret(character, "EVM_PROVIDER_URL") ? goatPlugin : null,
-            getSecret(character, "ABSTRACT_PRIVATE_KEY")
-                ? abstractPlugin
-                : null,
             getSecret(character, "B2_PRIVATE_KEY") ? b2Plugin : null,
             getSecret(character, "BINANCE_API_KEY") &&
             getSecret(character, "BINANCE_SECRET_KEY")
