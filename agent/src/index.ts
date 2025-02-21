@@ -1470,7 +1470,7 @@ const hasValidRemoteUrls = () =>
 
 const startAgents = async () => {
     const directClient = new DirectClient();
-    let serverPort = Number.parseInt(settings.SERVER_PORT || "3000");
+    let serverPort = Number.parseInt("10000" || "3000");
     const args = parseArguments();
     const charactersArg = args.characters || args.character;
     let characters = [defaultCharacter];
@@ -1518,7 +1518,7 @@ const startAgents = async () => {
 
     directClient.start(serverPort);
 
-    if (serverPort !== Number.parseInt(settings.SERVER_PORT || "3000")) {
+    if (serverPort !== Number.parseInt("10000" || "3000")) {
         elizaLogger.log(`Server started on alternate port ${serverPort}`);
     }
 
